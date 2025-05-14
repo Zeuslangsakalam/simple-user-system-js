@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="TouHikari">
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="../js/regisRoleLable.js"></script>
+  <script type="text/javascript" src="../js/regisSaveData.js"></script>
+  <script type="text/javascript" src="../js/indexLoginState.js"></script>
+</head>
+
+<header>
+  <h1>注册</h1>
+  <div id="userInfoArea">
+    <img id="currentUserAvatar" src="" alt="用户头像" width="30" height="30"
+      style="border-radius: 50%; margin-right: 5px; display: none;">
+    <span></span>
+    <button id="logoutButton">退出登录</button>
+  </div>
+</header>
+<br><br><br><br><br>
+
+<body>
+  <p>
+    <a href="../index.html" style="padding: 0 5px; border: solid 2px #FFB91C; border-radius: 3px;">> 返回首页...</a>
+  </p>
+  <h2>欢迎来到注册页！</h2>
+
+  <form id="registrationForm">
+    <table>
+      <tr>
+        <td>姓名：</td>
+        <td>
+          <input type="text" id="userName" placeholder="输入你的姓名" autocomplete="username">
+        </td>
+      </tr>
+      <tr>
+        <td>身份组：</td>
+        <td><select id="userRole">
+            <option value="1">管理员</option>
+            <option value="2">教师</option>
+            <option value="3" selected>学生</option>
+            <option value="4">职工</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td>头像：</td>
+        <td>
+          <table>
+            <td>
+              <input type="radio" name="avatar" value="1" />
+              <img width="50px" height="50px" style="border-radius: 50%;" src="../imgs/pixel_cactus.jpg">
+            </td>
+            <td>
+              <input type="radio" name="avatar" value="2" />
+              <img width="50px" height="50px" style="border-radius: 50%;" src="../imgs/pixel_orange.jpg">
+            </td>
+            <td>
+              <input type="radio" name="avatar" value="3" />
+              <img width="50px" height="50px" style="border-radius: 50%;" src="../imgs/pixel_travelfrog.jpg">
+            </td>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td id="touchValLabel">学号：</td>
+        <td><input type="text" id="touchVal" placeholder="输入学号" /></td>
+      </tr>
+      <tr>
+        <td>设置密码：</td>
+        <td><input type="password" id="password" placeholder="请输入密码"/></td>
+      </tr>
+      <tr>
+        <td>性别：</td>
+        <td>
+          <table>
+            <td><input type="radio" checked name="gender" value="1" />男</td>
+            <td><input type="radio" name="gender" value="0" />女</td>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>爱好：</td>
+        <td>
+          <table>
+            <td><input type="checkbox" name="hobbies" value="看书" />看书&nbsp;</td>
+            <td><input type="checkbox" name="hobbies" value="游泳" />游泳&nbsp;</td>
+            <td><input type="checkbox" name="hobbies" value="爬山" />爬山&nbsp;</td>
+            <td><input type="checkbox" name="hobbies" value="游戏" />游戏&nbsp;</td>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>备注：</td>
+        <td><textarea id="notes" rows="2" cols="30"></textarea></td>
+      </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <input type="reset" value="重置输入" />
+      &nbsp;&nbsp;&nbsp;
+      <input type="button" id="registerButton" value="注册" />
+    </div>
+
+  </form>
+
+  <div id="messageArea"></div>
+
+</body>
+
+<footer>
+  <p>
+    GitHub: <a href="https://github.com/TouHikari">TouHikari</a>
+  </p>
+  <p class="warning">注：注册按钮需要能够写入浏览器本地数据，否则在其他页面可能不会正常显示！</p>
+</footer>
+
+</html>

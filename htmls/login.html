@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="TouHikari">
+  <title>登录</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="../js/login.js"></script>
+</head>
+
+<header>
+  <h1>登录</h1>
+  <div id="userInfoArea">
+    <img id="currentUserAvatar" src="" alt="用户头像" width="25" height="25" style="border-radius: 50%; margin-right: 5px; display: none;">
+    <span></span>
+    <button id="logoutButton" style="display: none;">退出登录</button>
+  </div>
+</header>
+<br><br><br><br><br>
+
+<body>
+  <p>
+    <a href="../index.html" style="padding: 0 5px; border: solid 2px #FFB91C; border-radius: 3px;">> 返回首页...</a>
+  </p>
+  <h2>欢迎来到登录页！</h2>
+
+  <form id="loginForm">
+    <table>
+      <tr>
+        <td>姓名：</td>
+        <td>
+          <input type="text" id="userName" placeholder="输入你的姓名">
+        </td>
+      </tr>
+      <tr>
+        <td>身份组：</td>
+        <td><select id="userRole">
+            <option value="1">管理员</option>
+            <option value="2">教师</option>
+            <option value="3" selected>学生</option>
+            <option value="4">职工</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td id="touchValLabel">学号：</td>
+        <td><input type="text" id="touchVal" placeholder="输入学号" /></td>
+      </tr>
+      <tr>
+        <td>请输入密码：</td>
+        <td><input type="password" id="password" placeholder="请输入密码"/></td>
+      </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <input type="button" id="loginButton" value="登录" />
+    </div>
+  </form>
+
+  <div style="text-align: right; color: #d32f2f;">
+    <p>
+      还没有账号？
+      <a href="regis.html">去注册一个...</a>
+    </p>
+  </div>
+
+  <div id="messageArea"></div>
+
+</body>
+
+<footer>
+  <p>
+    GitHub: <a href="https://github.com/TouHikari">TouHikari</a>
+  </p>
+</footer>
+
+</html>

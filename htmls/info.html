@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="TouHikari">
+  <title>显示信息</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="../js/indexLoginState.js"></script>
+  <script type="text/javascript" src="../js/info.js"></script>
+  <style>
+    div {
+      font-size: large;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table {
+      text-align: center;
+      border: solid 3px #FFB91C;
+      border-collapse: collapse;
+    }
+
+    thead {
+      font-weight: bold;
+      color: #FF321C;
+      border: solid 3px #FFB91C;
+    }
+
+    td {
+      border: dashed 2px #FFB91C;
+      padding: 8px 10px;
+    }
+
+    #infoUserAvatar {
+      max-width: 100px;
+      max-height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+</head>
+
+<header>
+  <h1>显示信息</h1>
+  <div id="userInfoArea">
+    <img id="currentUserAvatar" src="" alt="用户头像" width="30" height="30"
+      style="border-radius: 50%; margin-right: 5px; display: none;">
+    <span></span>
+    <button id="logoutButton">退出登录</button>
+  </div>
+</header>
+<br><br><br><br><br>
+
+<body>
+  <p>
+    <a href="../index.html" style="padding: 0 5px; border: solid 2px #FFB91C; border-radius: 3px;">> 返回首页...</a>
+  </p>
+  <h2>欢迎来到显示信息页！</h2>
+
+  <div>
+    <table id="info-table" width="660px" height="400px">
+      <thead height="80">
+        <tr>
+          <td colspan="4">下面是你的账号信息</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="15%">姓名</td>
+          <td id="infoUserName" style="color: #1034A9"></td>
+          <td width="15%">头像</td>
+          <td>
+            <img id="infoUserAvatar" src="" alt="用户头像">
+          </td>
+        </tr>
+        <tr>
+          <td>学号</td>
+          <td id="infoTouchValue" style="color: #1034A9"></td>
+          <td>性别</td>
+          <td id="infoGender" style="color: #1034A9"></td>
+        </tr>
+        <tr>
+          <td>身份组</td>
+          <td id="infoUserRole" style="color: #1034A9"></td>
+          <td>爱好</td>
+          <td id="infoHobbies" style="color: #1034A9"></td>
+        </tr>
+        <tr>
+          <td>备注</td>
+          <td colspan="3" id="infoNotes" style="color: #1034A9"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="messageArea"></div>
+
+</body>
+
+<footer>
+  <p>
+    GitHub: <a href="https://github.com/TouHikari">TouHikari</a>
+  </p>
+</footer>
+
+</html>
