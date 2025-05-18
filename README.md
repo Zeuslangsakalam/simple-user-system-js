@@ -1,80 +1,123 @@
-# Simple User System (JavaScript Enhanced)
+# Simple User System JS
 
-这是一个简单的前端 Web 应用练习项目，旨在展示基础的用户注册、登录和信息展示功能。整个系统纯前端实现，利用浏览器自带的 LocalStorage 进行用户数据的持久化存储，并通过 SessionStorage 管理当前登录状态。此项目非常适合作为 Web 入门者学习 HTML, CSS, 和 Vanilla JavaScript 交互以及浏览器存储使用的Demo。
+![GitHub release](https://img.shields.io/github/release/Zeuslangsakalam/simple-user-system-js.svg) ![GitHub issues](https://img.shields.io/github/issues/Zeuslangsakalam/simple-user-system-js.svg) ![GitHub stars](https://img.shields.io/github/stars/Zeuslangsakalam/simple-user-system-js.svg)
 
-## 项目特性 (Features)
+Welcome to the **Simple User System JS** repository! This project is a straightforward front-end web application that showcases user registration, login, and profile display. It leverages HTML, CSS, and vanilla JavaScript, making it an excellent choice for beginners or anyone looking to practice their web development skills.
 
-- **用户注册:** 用户可以通过表单填写信息（姓名、身份组、头像选择、相关ID/学号/工号、密码、性别、爱好、备注）进行注册，数据保存在浏览器的 LocalStorage 中。
-- **用户登录:** 用户通过姓名、身份组、相关ID/学号/工号和密码进行登录验证。登录成功后，用户信息存储在浏览器的 SessionStorage 中，维持登录状态。
-- **信息展示:** 登录用户可以在信息页查看自己的详细注册信息。
-- **登录状态检测:** 首页、信息页和注册页的顶部会根据 SessionStorage 的状态显示当前登录用户信息或注册/登录链接。
-- **退出登录:** 提供退出登录功能，清除 SessionStorage 中的登录信息。
-- **身份组字段切换:** 注册和登录页面的 "相关ID" 字段会根据选择的身份组自动切换提示文本（ID/学号/工号）。
-- **客户端数据存储:** 所有用户数据和登录状态完全依赖浏览器本地存储 (LocalStorage 和 SessionStorage)。
-- **纯前端实现:** 无需后端服务，直接使用浏览器即可运行。
+## Table of Contents
 
-## 使用技术 (Technologies Used)
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [How to Contribute](#how-to-contribute)
+7. [License](#license)
+8. [Contact](#contact)
+9. [Releases](#releases)
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- LocalStorage API
-- SessionStorage API
+## Project Overview
 
-## 如何运行 (Getting Started)
+The **Simple User System JS** is designed to demonstrate core web development concepts, particularly in user authentication and data storage. This application does not require a backend server; instead, it uses the browser's LocalStorage and SessionStorage for data persistence. Users can register, log in, and view their profiles seamlessly.
 
-由于本项目完全是前端代码，运行非常简单：
+## Features
 
-1.  **克隆仓库:**
-    ```bash
-    git clone https://github.com/Your_GitHub_Username/simple-user-system-js.git
-    ```
-    _(请将 `Your_GitHub_Username` 替换为你的实际用户名)_
-2.  **打开文件:** 进入项目目录，在浏览器中直接打开 `index.html` 文件即可。
+- **User Registration**: Users can create accounts with a username and password.
+- **User Login**: Registered users can log in to access their profiles.
+- **Profile Display**: Users can view their profile information after logging in.
+- **Data Storage**: Utilizes LocalStorage and SessionStorage for data persistence.
+- **Responsive Design**: The application is designed to work on various screen sizes.
+- **Lightweight**: No external libraries or frameworks are used, keeping the application simple and fast.
 
-    **注意:** 直接通过 `file://` 协议打开 `index.html` 文件可能会遇到某些浏览器限制（特别是涉及到 LocalStorage/SessionStorage 的访问）。**强烈建议使用一个简单的本地 Web 服务器来提供文件服务**，例如：
-    *   **VS Code Extension:** 安装并使用 "Live Server" 插件，右键点击 `index.html` 选择 "Open with Live Server"。
-    *   **Python:** 在项目根目录下打开终端，运行 `python -m http.server` (Python 3) 或 `python -m SimpleHTTPServer` (Python 2)，然后在浏览器中访问 `http://localhost:8000`。
+## Technologies Used
 
-运行后，你可以在浏览器中访问首页，并尝试注册新用户，然后使用注册的账号进行登录。
+- **HTML**: For structuring the web pages.
+- **CSS**: For styling the application.
+- **JavaScript**: For adding interactivity and functionality.
+- **LocalStorage**: For storing user data persistently.
+- **SessionStorage**: For storing session-specific data.
 
-## 文件结构 (File Structure)
+## Installation
 
-```txt
-simpleUserSys/
-├── css/
-│   └── style.css
-├── htmls/
-│   ├── info.html
-│   ├── login.html
-│   └── regis.html
-├── imgs/
-│   ├── pixel_cactus.jpg
-│   ├── pixel_orange.jpg
-│   └── pixel_travelfrog.jpg
-├── js/
-│   ├── indexLoginState.js
-│   ├── info.js
-│   ├── login.js
-│   ├── regisRoleLable.js
-│   └── regisSaveData.js
-└── index.html
-```
+To get started with the **Simple User System JS**, follow these steps:
 
-*   `index.html`: 项目的入口文件，首页。根据登录状态显示不同的导航信息。
-*   `css/style.css`: 项目的全局样式文件，定义了页面元素的通用样式。
-*   `htmls/`: 存放除首页外的其他 HTML 页面。
-    *   `htmls/regis.html`: 用户注册页面。
-    *   `htmls/login.html`: 用户登录页面。
-    *   `htmls/info.html`: 登录用户的个人信息展示页面。
-*   `imgs/`: 存放项目使用的图片资源，主要是头像图片。
-*   `js/`: 存放项目的 JavaScript 逻辑文件。
-    *   `js/indexLoginState.js`: 用于处理首页、信息页、注册页顶部的登录状态显示和退出登录逻辑。
-    *   `js/regisRoleLable.js`: 处理注册页面中，根据身份组切换相关ID字段标签的逻辑。
-    *   `js/regisSaveData.js`: 处理注册表单数据的收集、校验和保存到 LocalStorage 的逻辑。
-    *   `js/login.js`: 处理登录表单数据的收集、校验和登录验证（与 LocalStorage 数据比对），以及登录状态的 SessionStorage 存储和页面跳转。
-    *   `js/info.js`: 从 SessionStorage 获取当前登录用户信息并显示在信息页表格中。
+1. Clone the repository:
 
-## 许可证 (License)
+   ```bash
+   git clone https://github.com/Zeuslangsakalam/simple-user-system-js.git
+   ```
 
-本项目采用 MIT 许可证。详情请查看 [LICENSE](LICENSE) 文件。
+2. Navigate to the project directory:
+
+   ```bash
+   cd simple-user-system-js
+   ```
+
+3. Open the `index.html` file in your preferred web browser.
+
+## Usage
+
+Once you have the application running, you can start using it right away:
+
+1. **Register a New User**:
+   - Fill out the registration form with a username and password.
+   - Click the "Register" button to create your account.
+
+2. **Log In**:
+   - Enter your registered username and password.
+   - Click the "Login" button to access your profile.
+
+3. **View Profile**:
+   - After logging in, you will be redirected to your profile page where you can see your details.
+
+4. **Data Persistence**:
+   - Your registration and login information will be stored in LocalStorage, so you can refresh the page or close the browser and return later without losing your data.
+
+## How to Contribute
+
+We welcome contributions to improve the **Simple User System JS**. Here’s how you can help:
+
+1. **Fork the Repository**: Click the "Fork" button on the top right corner of the page to create your own copy of the project.
+
+2. **Create a Branch**: Create a new branch for your feature or bug fix.
+
+   ```bash
+   git checkout -b my-feature
+   ```
+
+3. **Make Changes**: Make your changes in the codebase.
+
+4. **Commit Your Changes**: Commit your changes with a clear message.
+
+   ```bash
+   git commit -m "Add new feature"
+   ```
+
+5. **Push to Your Fork**: Push your changes to your forked repository.
+
+   ```bash
+   git push origin my-feature
+   ```
+
+6. **Open a Pull Request**: Go to the original repository and open a pull request. Describe your changes and why they should be merged.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- **Author**: Zeuslangsakalam
+- **Email**: zeuslangsakalam@example.com
+
+## Releases
+
+For the latest updates and versions of the **Simple User System JS**, please visit the [Releases](https://github.com/Zeuslangsakalam/simple-user-system-js/releases) section. Here, you can download the latest files and execute them in your browser.
+
+You can also check the [Releases](https://github.com/Zeuslangsakalam/simple-user-system-js/releases) section for any updates or new features added to the project.
+
+## Conclusion
+
+The **Simple User System JS** is an excellent project for anyone looking to understand the basics of user authentication and data storage in web applications. By using only front-end technologies, it provides a clear and concise way to learn essential web development skills. Whether you're a beginner or looking to sharpen your skills, this project is a great place to start. Happy coding!
